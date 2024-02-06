@@ -9,3 +9,6 @@ Bellabeat, a high-manufacturer of health-focused products for women, has asked f
 
 ## Business Task
 How can Bellabeat improve its smart devices by identifying consumer trends and implementing solid marketing strategies for Bellabeat Ivy Health Tracker?
+
+# BigQuery Import Process
+Had a problem importing certain .csv files into BigQuery since the format for the datetime in the files was incorrect. I wrote a Python code to correct all datetime columns to the right format. Having to convert 14 .csv files to the proper format is why in the code you will see **'column_name'** which I would replace with the correct column name for that table. Also didn't want to show the exact file path on my computer, so I put **'/path/to/table/being/formatted.csv'**
