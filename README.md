@@ -1,4 +1,4 @@
-# BellaBeatsCaseStudy
+# BellaBeat Case Study
 ## Case Study Scenario
 Bellabeat, a high-manufacturer of health-focused products for women, has asked to analyze how consumers use non-Bellabeat smart devices. They are looking for how trends in the data can help the marketing team improve one of their smart devices. 
 
@@ -281,7 +281,7 @@ GROUP BY
 ORDER BY
  1 ASC;
 ```
-The last data set I used was a data set of fitness consumer survey data that asked 30 participants various questions on how they used a fitness wearable in their daily lives. Imported this into a Google sheet with the dow results table and sleep patterns summary results. 
+The last data set I used was a data set of fitness consumer survey data that asked 30 participants various questions on how they used a fitness wearable in their daily lives—imported this into a Google sheet with the dow results table and sleep patterns summary results. 
 
 With my results imported into multiple Google sheets, I created six pivot tables that were used to show my final analysis of the data. 
 # List of pivot tables 
@@ -311,11 +311,37 @@ Analysis of gender groups and age groups that engage in fitness tracking. A data
 ![Frequency_of_Tracking_Fitness - Copy](https://github.com/RCastTX/BellaBeatsCaseStudy.github.io/assets/128720212/f1137720-9c9d-474d-9571-05887ad412f7)
 
 ## Insights
-*The 18-24 age group seems to be the most engaged with a fitness wearable.
+*The 18-24 age group is the most engaged with a fitness wearable.
 
 *Nearly 70 percent of all 18-24-year-olds wear the fitness tracker every day or every other day.
 
 *When it comes to gender, 30 percent of Male consumers wear the fitness tracker every day to every other day. While 23 percent of Females do.
 
+## Sleep Patterns
+Analyzed data set of sleep cycles for consumers in the study and found trends in sleep patterns.
+![AVG_Total_Sleep_Time - Copy](https://github.com/RCastTX/BellaBeatsCaseStudy.github.io/assets/128720212/51ae8f91-ac41-4415-b0cd-bd443ed4351a)
 
+![AVG_Number_of_Naps - Copy](https://github.com/RCastTX/BellaBeatsCaseStudy.github.io/assets/128720212/9681691c-744e-44d3-a96a-af7505c0bc15)
 
+![Improved_Sleep_Patterns - Copy](https://github.com/RCastTX/BellaBeatsCaseStudy.github.io/assets/128720212/417f4b9d-f7a4-459d-8bc5-059645c53b2d)
+
+## Insights
+*On average, each consumer is getting about 6.5 hours of sleep.
+
+*Also on average, each consumer is getting about 1 nap a day.
+
+## Conclusion on Analysis
+*Users see fitness wearables as a benefit to their overall health and well-being. 
+
+*The insights gained from the data show consumer trends favor morning and afternoon workouts.
+
+*The age group of 18-24 is most engaged with tracking fitness on a fitness wearable. With 70 percent of consumers under 24 years old tracking fitness every day or every other day.
+
+*Consumers felt sleep patterns improved with the use of a fitness wearable.
+
+# How can Bella Beats use these insights?
+*Create specific marketing campaigns for age groups 18-30 for the Ivy health tracker.
+
+*Market how the Leaf has specifically tailored routines for morning and afternoon workouts.
+
+*Market how Leaf can help achieve optimal sleep patterns with sleep tracking data.
