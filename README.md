@@ -11,7 +11,7 @@ Bellabeat, a high-manufacturer of health-focused products for women, has asked t
 How can Bellabeat improve its smart devices by identifying consumer trends and implementing solid marketing strategies for Bellabeat Ivy Health Tracker?
 
 # BigQuery Import Process
-Had a problem importing certain .csv files into BigQuery since the format for the datetime in the files was incorrect. I wrote a Python code to correct all datetime columns to the right format. Having to convert 14 .csv files to the proper format is why in the code you will see *'column_name'* which I would replace with the correct column name for that table. Also didn't want to show the exact file path on my computer, so I put *'/path/to/table/being/formatted.csv'*
+I had a problem importing certain .csv files into BigQuery since the format for the datetime in the files was incorrect. I wrote Python code to correct all datetime columns to the right format of (yyyy/dd/mm hh:mm:ss UTC). Having to convert fourteen .csv files to the proper format is why you will see *' column_name'* in the code, which I would replace with the correct column name for that table. Also, I didn't want to show the exact file path on my computer, so I put *'/path/to/table/being/formatted.csv'*
 
 # Python code for datetime conversion
 ```python
@@ -38,7 +38,7 @@ df.to_csv(output_file_path,index=False)
 ```
 # Cleaning Process through BigQuery
 **1 Step:**
-Use the *Distinct* function to make sure there weren't any duplicates in any of my tables. I checked Id and datetime columns. Replaced "table_name" with table name checked. 
+Used the *Distinct* function to ensure there weren't any duplicates in any of my tables. I checked the Id and datetime columns. I also Replaced "table_name" with the table I checked. 
 
 ```sql
 SELECT
@@ -55,7 +55,7 @@ ORDER BY
     ActivityDate
 ```
 **2nd Step:**
-Use the *ROUND* function to round all decimals to the second decimal place for cleaner tables. Only 3 tables needed to be cleaned up this way; dailyActiviy, minuteCaloriesNarrow, and weightLogInfo
+Used the *ROUND* function to round all decimals to the second decimal place for cleaner tables. I only had 3 tables that needed to be cleaned this way; dailyActiviy, minuteCaloriesNarrow, and weightLogInfo
 ```sql
 #Query for dailyActivity table
 SELECT
@@ -102,9 +102,8 @@ ORDER BY
 Id
 ```
 **3rd Step:**
-Make sure no tables have Null Values. Only 1 table had null values and it was the 
-weightLogInfo table. Used the COALESCE function in the previous code to change them to zeros.
-Went through every column name in the next query for every table.
+I made sure no tables have Null Values. Only 1 table had null values and it was the 
+weightLogInfo table. I also used the COALESCE function in the previous code to change them to zeros. I then went through every column name in the next query for every table.
 ```sql
 SELECT
   Col1,
@@ -117,7 +116,7 @@ ORDER BY
  “column_name”
 ```
 # Analyze Dataset's
-I started by making a comprehensive table of breaking down dow(day of the week) and time of day for physical activity based on the intensity level. Started by setting variables and then setting variables for the time of day/ dow analysis.
+I started by making a comprehensive table of breaking down dow(day of the week) and time of day for physical activity based on the intensity level.
 
 ```sql
 DECLARE
@@ -281,7 +280,7 @@ GROUP BY
 ORDER BY
  1 ASC;
 ```
-The last data set I used was a data set of fitness consumer survey data that asked 30 participants various questions on how they used a fitness wearable in their daily lives—imported this into a Google sheet with the dow results table and sleep patterns summary results. 
+The last data set I used was a data set of fitness consumer survey data that asked 30 participants various questions on how they used a fitness wearable in their daily lives. I then imported this into a Google sheet, since there were only 30 rows of data, and imported the dow results table and sleep patterns summary results. 
 
 With my results imported into multiple Google sheets, I created six pivot tables that were used to show my final analysis of the data. 
 # List of pivot tables 
@@ -293,11 +292,11 @@ With my results imported into multiple Google sheets, I created six pivot tables
 
 # Data Visualization through Tableau
 ## Day of the Week summary
-An analysis of the physical intensity of consumers based on the day of the week and time of day.
+An analysis of the physical intensity of consumers based on the dow and time of day.
 ![DOW_Visual - Copy](https://github.com/RCastTX/BellaBeatsCaseStudy.github.io/assets/128720212/64e2ad3e-a9ba-481a-a844-9b3c0274aba6)
 
 ## Insights
-*Afternoons are the most active time during the DOW for consumers.
+*Afternoons are the most active time during the dow for consumers.
 
 *Tuesday, Wednesday, and Thursday are the top 3 most active days for the week.
 
@@ -340,8 +339,8 @@ Analyzed data set of sleep cycles for consumers in the study and found trends in
 *Consumers felt sleep patterns improved with the use of a fitness wearable.
 
 # How can Bella Beats use these insights?
-*Create specific marketing campaigns for age groups 18-30 for the Ivy health tracker.
+*With insights into age demographics, Bellabeat can tailor-make marketing campaigns for the Ivy Health Tracker that specifically reach the 18-30 age group since they are the most engaged with tracking their fitness.
 
-*Market how the Leaf has specifically tailored routines for morning and afternoon workouts.
+*Bellabeats can market the Leaf as the new perfect fitness tracker for the person who exercises in the morning and afternoon. Bellabeat could have specific tailored routines for morning and afternoon workouts that are followed on the Ivy health tracker.
 
-*Market how Leaf can help achieve optimal sleep patterns with sleep tracking data.
+*Bellabeat could use the Ivy health tracker to market how it can track sleep patterns and have notifications goals on hitting optimal sleep times.
