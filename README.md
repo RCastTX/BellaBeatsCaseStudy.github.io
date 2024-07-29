@@ -38,7 +38,7 @@ df.to_csv(output_file_path,index=False)
 ```
 # Cleaning Process through BigQuery
 **1 Step:**
-Used the *Distinct* function to ensure there weren't any duplicates in any of my tables. I checked the Id and datetime columns. I also Replaced "table_name" with the table I checked. 
+I used the *Distinct* function to ensure no duplicates in my tables. I checked the Id and datetime columns. I also Replaced "table_name" with the table I checked. 
 
 ```sql
 SELECT
@@ -55,7 +55,7 @@ ORDER BY
     ActivityDate
 ```
 **2nd Step:**
-Used the *ROUND* function to round all decimals to the second decimal place for cleaner tables. I only had 3 tables that needed to be cleaned this way; dailyActiviy, minuteCaloriesNarrow, and weightLogInfo
+I used the *ROUND* function to round all decimals to the second decimal place for cleaner tables. I only had 3 tables that needed to be cleaned this way; dailyActiviy, minuteCaloriesNarrow, and weightLogInfo
 ```sql
 #Query for dailyActivity table
 SELECT
@@ -102,8 +102,8 @@ ORDER BY
 Id
 ```
 **3rd Step:**
-I made sure no tables have Null Values. Only 1 table had null values and it was the 
-weightLogInfo table. I also used the COALESCE function in the previous code to change them to zeros. I then went through every column name in the next query for every table.
+I made sure no tables had Null Values. Only 1 table had null values and it was the 
+weightLogInfo table. I also used the COALESCE function in the previous code to change them to zeros. I then reviewed every column name in the next query for every table.
 ```sql
 SELECT
   Col1,
@@ -296,7 +296,7 @@ An analysis of the physical intensity of consumers based on the dow and time of 
 ![DOW_Visual - Copy](https://github.com/RCastTX/BellaBeatsCaseStudy.github.io/assets/128720212/64e2ad3e-a9ba-481a-a844-9b3c0274aba6)
 
 ## Insights
-*Afternoons are the most active time during the dow for consumers.
+*Afternoons are the most active time during the day of the week for consumers.
 
 *Tuesday, Wednesday, and Thursday are the top 3 most active days for the week.
 
